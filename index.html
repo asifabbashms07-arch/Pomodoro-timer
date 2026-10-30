@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A minimal Pomodoro timer and task manager app." />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mode-focus">
+
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <h1>🍅 Pomodoro Timer</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Timer Section -->
+      <section id="timer-section" aria-label="Timer Section">
+        <p id="mode-label">Focus</p>
+        <div id="timer-display" role="timer" aria-label="Timer display">25:00</div>
+        <p id="status-message" aria-live="polite">Ready to focus?</p>
+
+        <!-- Controls -->
+        <div id="controls">
+          <button id="btn-start" aria-label="Start timer">Start</button>
+          <button id="btn-break" aria-label="Start break">Break</button>
+          <button id="btn-skip" aria-label="Skip to next session">Skip ⏭</button>
+        </div>
+
+        <!-- Session Progress -->
+        <div id="session-progress" aria-label="Session Progress"></div>
+      </section>
+
+      <!-- Task Section -->
+      <section id="task-section" aria-label="Task Section">
+        <h2>Tasks</h2>
+        <div id="task-input-group">
+          <input type="text" id="task-input" placeholder="What are you working on?" aria-label="What are you working on?" />
+          <button id="btn-add-task">+ Add Task</button>
+        </div>
+        <ul id="task-list" aria-label="Tasks List"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
